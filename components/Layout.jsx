@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     >
       {/* metadata */}
       <Head>
-        <title>Vijay Saratkar| Portfolio</title>
+        <title>Vijay Saratkar | Portfolio</title>
         <meta
           name="description"
           content="Vijay Saratkar is a Full-stack web developer with 2+ years of experience."
@@ -34,9 +34,8 @@ const Layout = ({ children }) => {
 
       <TopLeftImg />
       <Nav />
-      <Header />
 
-      {/* main content */}
+      <Header />
       {children}
     </main>
   );
