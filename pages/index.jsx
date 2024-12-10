@@ -8,7 +8,7 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 min-h-screen">
+    <div className="bg-primary/60 min-h-screen mt-45px">
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10 pt-[90px]">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
@@ -32,27 +32,19 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Are you seeking a dynamic digital freelancer or team member, who can
-            elevate your online presence and drive your business growth? Look no
-            further! I am a passionate and skilled web developer/web designer
-            with a keen eye for detail and a commitment to excellence. I
-            specialize in transforming your innovative ideas into stunning,
-            user-friendly websites that captivate and convert. Let's collaborate
-            to bring your visions to life and propel your business to new
-            heights. Ready to make a significant impact on your project? Get in
-            touch today!
+            Looking for a skilled web developer to elevate your online presence?
+            I specialize in creating stunning, user-friendly websites that
+            captivate and convert. Let’s collaborate to transform your ideas
+            into impactful digital solutions. Ready to grow your business?
+            Contact me today!
+            <br />
           </motion.p>
 
-          {/* btn */}
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
-          </div>
           <motion.div
             variants={fadeIn("down", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden xl:flex"
           >
             <ProjectsBtn />
           </motion.div>

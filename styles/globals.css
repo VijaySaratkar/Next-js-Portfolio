@@ -49,3 +49,10 @@
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
 }
+@media (max-width: 768px) {
+  .children-wrapper {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 90vh;
+  }
+}

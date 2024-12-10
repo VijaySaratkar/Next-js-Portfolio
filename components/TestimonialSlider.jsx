@@ -33,59 +33,48 @@ const testimonialData = [
 
 const TestimonialSlider = () => {
   return (
-    <Swiper
-      navigation
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Navigation, Pagination]}
-      className="h-[400px]"
-    >
-      {testimonialData.map((person, i) => (
-        <SwiperSlide key={i}>
-          <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
-            {/* avatar, name, position */}
-            <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
-              <div className="flex flex-col justify-center text-center">
-                {/* avatar */}
-                <div className="mb-2 mx-auto">
-                  <Image
-                    src={person.image}
-                    width={100}
-                    height={100}
-                    alt={person.name}
+    <div className="relative">
+      <Swiper
+        navigation
+        pagination={false}
+        modules={[Navigation, Pagination]}
+        className="h-[400px] md:h-[550px]"
+      >
+        {testimonialData.map((person, i) => (
+          <SwiperSlide key={i}>
+            <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
+              <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
+                <div className="flex flex-col justify-center text-center">
+                  <div className="mb-2 mx-auto">
+                    <Image
+                      src={person.image}
+                      width={100}
+                      height={100}
+                      alt={person.name}
+                    />
+                  </div>
+                  <div className="text-lg">{person.name}</div>
+                  <div className="text-[12px] uppercase font-extralight tracking-widest">
+                    {person.position}
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
+                <div className="mb-4">
+                  <FaQuoteLeft
+                    className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0"
+                    aria-hidden
                   />
                 </div>
-
-                {/* name */}
-                <div className="text-lg">{person.name}</div>
-
-                {/* position */}
-                <div className="text-[12px] uppercase font-extralight tracking-widest">
-                  {person.position}
+                <div className="text-[12px] sm:text-base md:text-[24px] font-serif sm:font-sans md:font-serif text-left md:text-left px-2 sm:px-4 md:px-0 max-h-[200px] sm:max-h-[300px]">
+                  {person.message}
                 </div>
               </div>
             </div>
-
-            {/* quote & message */}
-            <div className="flex-1 flex flex-col justify-center before:w-[1px] xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20">
-              {/* quote icon */}
-              <div className="mb-4">
-                <FaQuoteLeft
-                  className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0"
-                  aria-aria-hidden
-                />
-              </div>
-
-              {/* message */}
-              <div className="xl:text-lg text-center md:text-left">
-                {person.message}
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

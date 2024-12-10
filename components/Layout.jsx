@@ -34,9 +34,10 @@ const Layout = ({ children }) => {
 
       <TopLeftImg />
       <Nav />
-
       <Header />
-      {children}
+
+      {/* Wrapper for children */}
+      <div className="children-wrapper">{children}</div>
     </main>
   );
 };
